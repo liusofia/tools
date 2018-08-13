@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--标题栏布局begin-->
+    <RelativeLayout
+        android:id="@+id/top_bar_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        <!--Tools 功能项 -->
+        <TextView
+            android:id="@+id/showToolsFeature"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/showToolsFeature_Text"/>
+        <!--展示api level -->
+        <TextView
+            android:id="@+id/showApiLevel"
+            android:textSize="10dp"
+            android:layout_toRightOf="@id/showToolsFeature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/showAPListDeatils_Text"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <!--标题栏布局end-->
+    <!--导航栏布局begin -->
+    <LinearLayout
+        android:id="@+id/nav_bar_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <!--
+                 <TextView
+            android:id="@+id/switch_ap_nav_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:focusable="true"
+            android:descendantFocusability = "afterDescendants"
+            android:text="@string/nav_switch_ap_txt"
+            android:textColor="@color/mi_wifi_color"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="2px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:id="@+id/capture_log_nav_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:focusable="true"
+            android:descendantFocusability = "afterDescendants"
+            android:text="@string/nav_capture_log_txt"
+            android:textColor="@color/mi_wifi_color"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="2px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:id="@+id/enable_disable_wifi_nav_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:focusable="true"
+            android:descendantFocusability = "afterDescendants"
+            android:text="@string/nav_enable_disable_txt"
+            android:textColor="@color/mi_wifi_color"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="2px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"/>
+         -->
+        <TextView
+            android:id="@+id/iperf_nav_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:focusable="true"
+            android:descendantFocusability = "afterDescendants"
+            android:text="@string/nav_iperf_txt"
+            android:textColor="@color/mi_wifi_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!--在导航栏上面的小横线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@android:color/white"
+        android:layout_above="@id/nav_bar_relative_layout"/>
+    <!--导航栏布局end-->
+    <!--在标题栏和导航栏中间的Framelayout begin-->
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar_relative_layout"
+        android:layout_above="@id/nav_bar_relative_layout">
+    </FrameLayout>
+    <!--在标题栏和导航栏中间的Framelayout end-->
+</RelativeLayout>
